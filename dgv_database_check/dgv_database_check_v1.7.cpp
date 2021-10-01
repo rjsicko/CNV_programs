@@ -18,7 +18,7 @@ Overlap_info:
 							 ---++++++-------------------------   DGV2 CNV(2)							 
 							 ----------XXX---------------------   Intersection
 							 ------XXXXXXXXXXXXXXXXXXX---------   Denominator for union overlap
-
+The DGV2 database can be found here: http://dgv.tcag.ca/dgv/app/home?ref=
 ****END DESCRIPTION****
 
 ****REQUIRED FORMAT****
