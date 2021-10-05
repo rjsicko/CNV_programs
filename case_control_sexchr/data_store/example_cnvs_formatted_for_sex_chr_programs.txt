@@ -1,0 +1,5 @@
+ourID	subjectID	phenotype	case/control	chr	start	stop	copy_num	ISEX
+CNV_Xc_0001	A46454	some_pheno	1	X	60425	773147	2	M
+CNV_Xc_0002	A45684	some_similar_pheno	1	X	60425	773147	2	M
+CNV_Xc_0003	A56868	other_pheno	1	X	60425	915625	2	M
+CNV_Xc_0004	A45017	other_pheno	1	X	36608953	36629780	0	F

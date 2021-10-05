@@ -1,0 +1,48 @@
+GENCODE version 17 corresponds to Ensembl 72 from June 2013 and Vega 52 from May 2013.
+
+The GENCODE project aims to annotate all evidence-based gene features on the human reference sequence with high accuracy by integrating computational approaches (including comparative methods), manual annotation and targeted experimental verification. This goal includes identifying all protein-coding loci with associated alternative variants, non-coding loci which have transcript evidence, and pseudogenes. For a detailed description of the methods and references used, see Harrow et al. (2006).
+
+GENCODE Basic Set selection: The GENCODE Basic Set is intended to provide a simplified subset of the GENCODE transcript annotations that will be useful to the majority of users. The goal was to have a high-quality basic set that also covered all loci. Selection of GENCODE annotations for inclusion in the basic set was determined independently for the coding and non-coding transcripts at each gene locus.
+
+Criteria for selection of coding transcripts (including polymorphic pseudogenes) at a given locus:
+All full-length coding transcripts (except problem transcripts or transcripts that are nonsense-mediated decay) was included in the basic set.
+If there were no transcripts meeting the above criteria, then the partial coding transcript with the largest CDS was included in the basic set (excluding problem transcripts).
+Criteria for selection of non-coding transcripts at a given locus:
+All full-length non-coding transcripts (except problem transcripts) with a well characterized biotype (see below) were included in the basic set.
+If there were no transcripts meeting the above criteria, then the largest non-coding transcript was included in the basic set (excluding problem transcripts)..
+It no transcripts were included by either the above criteria, the longest problem transcript is included.
+Non-coding transcript categorization: Non-coding transcripts are categorized using their biotype and the following criteria:
+
+well characterized: antisense, Mt_rRNA, Mt_tRNA, miRNA, rRNA, snRNA, snoRNA
+poorly characterized: 3prime_overlapping_ncrna, lincRNA, misc_RNA, non_coding, processed_transcript, sense_intronic, sense_overlapping
+Transcription Support Level (TSL): It is important that users understand how to assess transcript annotations that they see in GENCODE. While some transcript models have a high level of support through the full length of their exon structure, there are also transcripts that are poorly supported and that should be considered speculative. The Transcription Support Level (TSL) is a method to highlight the well-supported and poorly-supported transcript models for users. The method relies on the primary data that can support full-length transcript structure: mRNA and EST alignments supplied by UCSC and Ensembl.
+
+The mRNA and EST alignments are compared to the GENCODE transcripts and the transcripts are scored according to how well the alignment matches over its full length. The GENCODE TSL provides a consistent method of evaluating the level of support that a GENCODE transcript annotation is actually expressed in humans. Human transcript sequences from the International Nucleotide Sequence Database Collaboration (GenBank, ENA, and DDBJ) are used as the evidence for this analysis. Exonerate RNA alignments from Ensembl, BLAT RNA and EST alignments from the UCSC Genome Browser Database are used in the analysis. Erroneous transcripts and libraries identified in lists maintained by the Ensembl, UCSC, HAVANA and RefSeq groups are flagged as suspect. GENCODE annotations for protein-coding and non-protein-coding transcripts are compared with the evidence alignments.
+
+Annotations in the MHC region and other immunological genes are not evaluated, as automatic alignments tend to be very problematic. Methods for evaluating single-exon genes are still being developed and they are not included in the current analysis. Multi-exon GENCODE annotations are evaluated using the criteria that all introns are supported by an evidence alignment and the evidence alignment does not indicate that there are unannotated exons. Small insertions and deletions in evidence alignments are assumed to be due to polymorphisms and not considered as differing from the annotations. All intron boundaries must match exactly. The transcript start and end locations are allowed to differ.
+
+The following categories are assigned to each of the evaluated annotations:
+
+tsl1 - all splice junctions of the transcript are supported by at least one non-suspect mRNA
+tsl2 - the best supporting mRNA is flagged as suspect or the support is from multiple ESTs
+tsl3 - the only support is from a single EST
+tsl4 - the best supporting EST is flagged as suspect
+tsl5 - no single transcript supports the model structure
+tslNA - the transcript was not analyzed for one of the following reasons:
+pseudogene annotation, including transcribed pseudogenes
+human leukocyte antigen (HLA) transcript
+immunoglobin gene transcript
+T-cell receptor transcript
+single-exon transcript (will be included in a future version)
+
+
+NOTE: X,Y,M genes left in this file. However, the following were removed:
+
+chr6_ssto_hap7 chr6_mcf_hap5 chr6_cox_hap2 chr6_mann_hap4 chr6_apd_hap1 chr6_qbl_hap6 chr6_dbb_hap3 chr17_ctg5_hap1 chr4_ctg9_hap1 chr1_gl000192_random chrUn_gl000225 chr4_gl000194_random chr4_gl000193_random chr9_gl000200_random chrUn_gl000222 chrUn_gl000212 chr7_gl000195_random chrUn_gl000223 chrUn_gl000224 chrUn_gl000219 chr17_gl000205_random chrUn_gl000215 chrUn_gl000216 chrUn_gl000217 chr9_gl000199_random chrUn_gl000211 chrUn_gl000213 chrUn_gl000220 chrUn_gl000218 chr19_gl000209_random chrUn_gl000221 chrUn_gl000214 chrUn_gl000228 chrUn_gl000227 chr1_gl000191_random chr19_gl000208_random chr9_gl000198_random chr17_gl000204_random chrUn_gl000233 chrUn_gl000237 chrUn_gl000230 chrUn_gl000242 chrUn_gl000243 chrUn_gl000241 chrUn_gl000236 chrUn_gl000240 chr17_gl000206_random chrUn_gl000232 chrUn_gl000234 chr11_gl000202_random chrUn_gl000238 chrUn_gl000244 chrUn_gl000248 chr8_gl000196_random chrUn_gl000249 chrUn_gl000246 chr17_gl000203_random chr8_gl000197_random chrUn_gl000245 chrUn_gl000247 chr9_gl000201_random chrUn_gl000235 chrUn_gl000239 chr21_gl000210_random chrUn_gl000231 chrUn_gl000229 chrUn_gl000226 chr18_gl000207_random
+
+"In the past, these tables contained data related to sequence that is known to be in a particular chromosome, but could not be reliably ordered within the current sequence.
+Starting with the April 2003 human assembly, these tables also include data for sequence that is not in a finished state, but whose location in the chromosome is known, in addition to the unordered sequence. Because this sequence is not quite finished, it could not be included in the main "finished" ordered and oriented section of the chromosome.
+Also, in a very few cases in the April 2003 assembly, the random files contain data related to sequence for alternative haplotypes. This is present primarily in chr6, where we have included two alternative versions of the MHC region in chr6_random. There are a few clones in other chromosomes that also correspond to a different haplotype. Because the primary reference sequence can only display a single haplotype, these alternatives were included in random files. In subsequent assemblies, these regions have been moved into separate files (e.g. chr6_hla_hap1)."
+
+4095 of these removed.
+

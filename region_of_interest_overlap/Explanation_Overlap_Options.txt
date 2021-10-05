@@ -1,0 +1,30 @@
+NOTE: Modified this example is a modified version provided in PLINK documentation (http://pngu.mgh.harvard.edu/~purcell/plink/cnv.shtml#groups)
+ 
+
+
+------|-----|---------------------   Region/gene
+----------+++++++++++++++---------   CNV (duplication, +)
+
+----------XXX---------------------   Intersection
+
+------XXXXXXXXXXXXXXXXXXX---------   Denominator for union overlap
+------XXXXXXX---------------------   Denominator for region overlap
+----------XXXXXXXXXXXXXXX---------   Denominator for CNV overlap
+
+
+
+
+So, what would our overlap % look like for the 3 different options?
+
+Union overlap (Option 1):
+	3/19 = 15.79%
+
+Region overlap (Option 2):
+	3/7 = 42.86%
+	
+CNV overlap (Option 3):
+	3/12 = 25%
+	
+
+
+		

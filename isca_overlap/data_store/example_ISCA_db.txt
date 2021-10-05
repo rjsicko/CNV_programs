@@ -1,0 +1,3 @@
+database_from	name	phenotype	chr	chromStart	chromEnd	CN
+ISCA	fake278984	Abnormality of the heart	3	73903	9107981	4
+ISCA	fake689219	Hypoplastic left heart	4	189914067	190896574	0
